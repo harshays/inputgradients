@@ -1,5 +1,9 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+_*.ipynb
+datasets/*cifar*
+*.xml
+*.idea
 *.py[cod]
 *$py.class
 
