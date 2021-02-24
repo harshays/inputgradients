@@ -15,16 +15,6 @@ import synth_models
 import utils
 import matplotlib.pyplot as plt
 
-try:
-    sys.path.append('../../cifar10_models/')
-    import cifar10_models as c10
-    c10_not_found = False
-except:
-    c10_not_found = True
-
-torch.backends.cudnn.benchmark = True
-torch.backends.cudnn.enabled = True
-
 def _get_dataloaders(trd, ted,  bs, pm=True, shuffle=True):
     train_dl = DataLoader(trd, batch_size=bs, shuffle=shuffle, pin_memory=pm)
     test_dl = DataLoader(ted, batch_size=bs, pin_memory=pm)
@@ -133,7 +123,3 @@ def get_cifar_dl(fpath='/data/t-hashah/pytorch_datasets/', use_cifar10=False, bs
     tr_dl = DataLoader(d_tr, batch_size=bs, shuffle=shuffle, num_workers=nw, pin_memory=pm)
     te_dl = DataLoader(d_te, batch_size=bs, num_workers=nw, pin_memory=pm)
     return tr_dl, te_dl
-
-
-if __name__ == '__main__':
-    pass

@@ -10,7 +10,6 @@ import utils
 import numpy as np
 import torch
 
-
 plt.rcParams.update({
     "text.usetex": True,
     "font.family": "sans-serif"

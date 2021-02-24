@@ -13,7 +13,7 @@ import torchvision
 from torch import optim, nn
 import torch.nn.functional as F
 
-import attb_utils as au
+import misc_utils as mu
 
 class SaliencyMap(object):
 
@@ -53,7 +53,7 @@ class SaliencyMap(object):
 
     def get_attribution_masked_data(self, X, A, mask_fraction, mask_val):
         """return masked data given data + attribution indices"""
-        return au.get_masked_data(X, A, mask_fraction, mask_val)
+        return mu.get_masked_data(X, A, mask_fraction, mask_val)
 
 # random attributions
 class RandomAttribution(SaliencyMap):
@@ -77,7 +77,6 @@ class RandomAttribution(SaliencyMap):
             grads.append(gb)
             
             model.zero_grad()
-            #xb.grad.zero_()
             yb.cpu()
             del xb 
 
@@ -112,7 +111,6 @@ class LossGrad(SaliencyMap):
             grads.append(gb)
             
             model.zero_grad()
-            #xb.grad.zero_()
             yb.cpu()
             del xb 
 
@@ -153,7 +151,6 @@ class LogitGrad(SaliencyMap):
             grads.append(gb)
             
             model.zero_grad()
-            #xb.grad.zero_()
             yb.cpu()
             del xb 
 
