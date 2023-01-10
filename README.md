@@ -10,7 +10,7 @@ This repository consists of code primitives and Jupyter notebooks that can be us
 
 ### Setup
 1. Our code and Jupyter notebooks require Python 3.7.3, Torch 1.1.0, Torchvision 0.3.0, Ubuntu 18.04.2 LTS and additional packages listed in `requirements.txt`.
-2. The first notebook ```01_fig_in_real_data.ipynb``` requires standard and robust models that are trained on original and attribution-masked CIFAR-10 and ImageNet-10 datasets. Our models can be downloaded using this [link](https://drive.google.com/file/d/1fvlJZBf0CFOJXrpV2u97QIEuNkg5Hh7G/view?usp=sharing), which includes ~20 models trained on original datasets and ~400 models trained on masked datasets. Check out ```01_fig_in_real_data.ipynb``` to know more about training standard and robust models on original and attribution-masked datasets from scratch. 
+2. The first notebook ```01_fig_in_real_data.ipynb``` requires standard and robust models that are trained on original and attribution-masked CIFAR-10 and ImageNet-10 datasets. Our models can be downloaded using this [link](https://www.dropbox.com/s/xn3xyyxug3w1jzb/inputgradients.tar.gz?dl=0), which includes ~20 models trained on original datasets and ~400 models trained on masked datasets. Check out ```01_fig_in_real_data.ipynb``` to know more about training standard and robust models on original and attribution-masked datasets from scratch. 
 
 --- 
 If you find this project useful in your research, please consider citing the following paper:
